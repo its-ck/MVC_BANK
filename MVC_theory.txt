@@ -1,0 +1,72 @@
+Programming in Java using the MVC architecture
+
+Introduction
+
+
+This article is about MVC framework in Java application development, from desktop applications for basic programs to enterprise solutions written in Java. In this article the basic concepts about MVC framework would b covered. MVC framework is used to separate the data access layer, business logic code and the graphical user interface that has to be defined and designed to let the user interact with the application. This application has three parts, 
+
+Model - this part of the framework is to store the data of the application, such as databases, text data, files and/or other web resources. 
+View - this is the graphical user interface of the application. That would contain different buttons, text boxes and other controls to let the user interact with the application to complete his projects depending on sort of the software he is using. 
+Controller - the actual back-end code constitutes the controller of the framework. A controller controls the data coming from the users, or going to the user from a model. 
+This sets up a condition of validation, because the stream of data (coming from or going to the user) is always validated on the controller. That is why it makes the data more consistent by removing any chance of invalid data entry or unauthorized data deletion from the application's data source. 
+
+Background of MVC
+In this short section I would try to provide a basic overview of the MVC framework. This section is not for Java-specific framework, but for the MVC framework itself. Beginners might be interested in knowing what this MVC framework is, how it interacts, and how it makes the software development efficient. But if you already know the MVC framework then you don't really want to read this section, continue to the development of the application in the next section.
+
+The MVC framework, is generally a term for a software architecture for implementing the user interfaces. You can separate the software's source code into three different layers. 
+
+Model
+View
+Controller
+After that you can develop them separately. This way you don't have to scratch your head once your application reaches an enterprise level and your source code looks a bit messy and is unable or debug. In MVC you have all your three layers separate and this way you can control, develop, debug or add features to all of the layers separately. 
+
+A very good feature of the MVC framework is that is hides the data access layer from the users. That is, the data access layer or the data is never actually called directly by the user; from the interface. This way, the user has to perform the actions that he is allowed to. This feature allows the developers to create groups or roles of users that are allowed to access the data; such as Admins, Guests etc. 
+
+Another good thing about this framework is that it doesn't let the application get so complicated, and all the three segments of the application interfering with each other in a single source code package. So you always know where the problem occurred. Common examples of this would be, 
+
+When you know that the problem is in the data access layer. For example, in the database you've allowed null entries, so now spam users would be able to leave the data inconsistent and cause a problem of redundancy. You can edit the data access layer, so that you can define the columns to not have null values. 
+When the view is not showing the data correctly. Such as scenarios where binding of the data is not accurate, or the format is not correct like the format of the date and time values. You can simply just edit the View section of your application to make it work again, instead of editing the entire page containing different variables for back-end code and/or the data access code. 
+When the logic is not correctly defined. Sometimes the data is correct, the view is correctly bonded to the resources, but the logic of your application is not correct. This type of problem is hard to figure out, because developer has to think about where code went wrong by giving it a rough try or by debugging the code using the IDE and putting a few breakpoints at the locations. 
+These are a few of the good points of the MVC framework for developing the software applications. In visual representation, the MVC framework works in this way, 
+
+
+
+Image clarifies that the user is not able to connect to the data sources himself. Instead he has to interact with the top-level layers to access the data. Such as, the view, he interacts with buttons and the buttons then call the controller to perform an action on the data (if required). But the data is not directly accessible by the user. This makes the data source secure from potential users; anyhow, there is always a threat of potential user. 
+
+I wrote an article about the ASP.NET MVC framework, where I demonstrated the MVC framework before digging deeper into the ASP.NET's MVC framework; just like this one. So, if you're interested on learning more for MVC framework you might be interested in reading that article for one time; just the MVC section not the ASP.NET part. You can read that article here, and you can also post any queries or questions about that article on it. 
+
+Building the application
+Now comes the actual part of implementing this framework and building over Java-based application. In the steps coming, I will show you how you can (using this very framework) create applications starting from as simple as Hello world application to as much complex as enterprise level applications using Java. 
+
+Setting the environment - for Java beginners
+
+For developing Java applications, you are required to have an environment set up. Environment requires an IDE; for writing the source code and managing the required libraries into one single package, a few popular nowadays are
+
+Eclipse for Java - Eclipse is greatly used Java IDE, it supports other languages too, but since we're talking about Java application so I highlighted only Java. 
+NetBeans by Oracle - NetBeans is an IDE developed under Oracle license and is mostly used by beginners for the sake that it helps them create a GUI by drag-and-drop feature. I am also using NetBeans for Java development, for Android development I prefer Eclipse. You can choose on your own as your taste would like.
+and the Java SDK. Now it depends on which level of application you're going to developer, there are multiple type of Java SDK available out there for you and you can choose from them. I am using Java SE SDK and it fulfills my requirements. A list of the Java SDK available for download, and popular, are, 
+
+Java SE - Standard edition. Perfect for small applications, like desktop or other applications that are not much complex. 
+Java EE - Enterprise edition. Should be preferred over Java SE if you're going to develop an enterprise application and the program should be complex. 
+Java ME - Millennium edition. It is used to develop mobile applications, such as .jar applications and other projects that are to be run over mobile devices. It should be used because it requires less memory and a small heap size for the application to run, thus suitable for mobile application programming.
+Then they continue to all the way to TV, Cards and so on and so forth. Learn more here.
+You can download any SDK, the Java language would be similar. So the code in my article would be a good fit you in any condition. You can download and install the SDK on your machine. Once this step has been taken you can continue to the programming. 
+
+
+
+Points of Interest
+
+In this article you learned about the MVC framework (pattern) of software development, how one can implement this framework in his software development, to distribute the source code into three different layers.
+
+Model - for the data.
+View - for the user interface.
+Controller - for the back-end code.
+In Java, you're required to install the SDK for Java and then an IDE supporting Java programming language to develop applications. Application that is developed, can have any programming architecture used in it. In our case we used the MVC framework, there are some others too like MVVM. 
+
+In Java, you combine and merge the similar classes into packages like you create a namespace in C# or C++. These packages are useful in distributing the code of same category in different packages under different name. 
+
+You can create as many package in an application as you want and then you can reference them in your projects. Classes of same project, do not need to import the classes, but the classes outside of your package need to make a reference to your package before they can access your classes. 
+
+In a MVC pattern, the data is not directly accessible by the user, instead the controller handles all the requests from and to the model in order to prove the validity and the consistency of the data. The view can trigger different commands, using which we can force the application to perform actions. 
+
+In MVC, you split the source code so that once the application reaches the level of enterprise solution you do not have to scratch your head or pull your hairs just because your code looks fuzzy now. MVC allows you to maintain the code separately, focusing over one section at a time. Either that one is a view, a model or the controller itself. You can debug your application more fastly by knowing which of the division needs your attention at the moment and leaving other two as they are. 
